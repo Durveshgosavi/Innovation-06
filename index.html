@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement for Life | Help Centre</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ionicons for Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">CAMPUS ACTIVE</div>
+        <nav>
+            <a href="#schedule">Weekly Schedule</a>
+            <a href="#about">Why Join?</a>
+            <a href="#contact">Contact</a>
+            <a href="dashboard.html" class="nav-login-btn">Student Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empower Your Campus Life</h1>
+            <p>Balance your studies with movement. Join the student community for sports, yoga, and outdoor adventures.
+            </p>
+            <div class="hero-buttons">
+                <a href="#schedule" class="cta-button">See Schedule</a>
+                <a href="dashboard.html" class="cta-button secondary">Track Progress</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro / Features Section -->
+    <section id="about" class="intro">
+        <h2>Boost Your Focus & Energy</h2>
+        <p>A healthy body fuels a sharp mind. Take a break from the library and move with us.</p>
+
+        <div class="intro-grid">
+            <div class="feature-card">
+                <div class="icon"><ion-icon name="fitness-outline"></ion-icon></div>
+                <h3>Exam Stress Relief</h3>
+                <p>High-cortisol levels block learning. Lower stress with our guided meditaion and yoga sessions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><ion-icon name="people-outline"></ion-icon></div>
+                <h3>Social Connections</h3>
+                <p>Meet students from other faculties. Our team games are designed to build friendships, not just
+                    muscle.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><ion-icon name="trending-up-outline"></ion-icon></div>
+                <h3>Track Your Gains</h3>
+                <p>Log your activities and watch your progress. Compete with yourself and stay motivated all semester.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <h2>This Week's Schedule</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
+            We have planned a diverse week of activities. All sessions are beginner-friendly and guided by our expert
+            team.
+        </p>
+
+        <div id="schedule-container" class="timeline">
+            <!-- Dynamic Content Loaded via JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="logo" style="margin-bottom: 1rem;">Help Centre</div>
+        <p>Denmark • +45 12 34 56 78 • info@helpcentre.dk</p>
+        <p style="margin-top: 2rem;">&copy; 2026 Help Centre. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
