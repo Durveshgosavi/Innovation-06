@@ -1,62 +1,60 @@
-import studentProgress from './progress.js';
-
+// Demo mode: No login required, chart renders automatically
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
-    const authScreen = document.getElementById('auth-screen');
-    const dashboardScreen = document.getElementById('dashboard-screen');
-    const userDisplay = document.getElementById('user-display');
     const progressChartCanvas = document.getElementById('progress-chart');
 
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+    // Demo data for the chart
+    const demoProgress = {
+        day1: { completed: true },
+        day2: { completed: true },
+        day3: { completed: true },
+        day4: { completed: true },
+        day5: { completed: true }
+    };
 
-        // Simple hardcoded authentication
-        if (username === 'parent' && password === 'password') {
-            authScreen.style.display = 'none';
-            dashboardScreen.style.display = 'block';
-            userDisplay.textContent = username;
-            renderProgressChart(studentProgress.week6);
-        } else {
-            alert('Invalid credentials');
-        }
-    });
+    // Render chart immediately for demo
+    renderProgressChart(demoProgress);
 
-    function renderProgressChart(week6) {
-        const labels = Object.keys(week6);
-        const data = labels.map(day => week6[day].completed ? 1 : 0);
+    function renderProgressChart(weekData) {
+        const labels = Object.keys(weekData);
+        const data = labels.map(day => weekData[day].completed ? 1 : 0);
 
         new Chart(progressChartCanvas, {
             type: 'bar',
             data: {
                 labels: labels.map(day => `Day ${day.slice(-1)}`),
                 datasets: [{
-                    label: 'Progress',
+                    label: 'Completed',
                     data: data,
                     backgroundColor: [
-                        'rgba(0, 160, 226, 0.2)',
-                        'rgba(0, 160, 226, 0.2)',
-                        'rgba(0, 160, 226, 0.2)',
-                        'rgba(0, 160, 226, 0.2)',
-                        'rgba(0, 160, 226, 0.2)',
+                        'rgba(255, 103, 0, 0.7)',
+                        'rgba(255, 103, 0, 0.7)',
+                        'rgba(255, 103, 0, 0.7)',
+                        'rgba(255, 103, 0, 0.7)',
+                        'rgba(255, 103, 0, 0.7)',
                     ],
                     borderColor: [
-                        'rgba(0, 160, 226, 1)',
-                        'rgba(0, 160, 226, 1)',
-                        'rgba(0, 160, 226, 1)',
-                        'rgba(0, 160, 226, 1)',
-                        'rgba(0, 160, 226, 1)',
+                        'rgba(255, 103, 0, 1)',
+                        'rgba(255, 103, 0, 1)',
+                        'rgba(255, 103, 0, 1)',
+                        'rgba(255, 103, 0, 1)',
+                        'rgba(255, 103, 0, 1)',
                     ],
-                    borderWidth: 1
+                    borderWidth: 2,
+                    borderRadius: 8
                 }]
             },
             options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
+                        max: 1,
                         ticks: {
-                            stepSize: 1
+                            stepSize: 1,
+                            callback: value => value === 1 ? '✓' : ''
                         }
                     }
                 }

@@ -1,12 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Schools | Danish Cancer Society</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>School Dashboard | Danish Cancer Society</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="new-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .school-dashboard {
+            padding: 100px 10% 4rem;
+            background: var(--bg-light);
+            min-height: 100vh;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .dashboard-header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-overview {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .stat-box .label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chart-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .chart-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .students-table {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .students-table h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .progress-bar-mini {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100px;
+        }
+
+        .progress-bar-mini-fill {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-progress {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-pending {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .stats-overview {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -14,52 +158,200 @@
         <div class="logo">Danish Cancer Society</div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="5-day-plan.html">The Plan</a>
             <a href="parent-dashboard.html">Parent Dashboard</a>
         </nav>
     </header>
 
-    <!-- For Schools Section -->
-    <section class="for-schools-section">
-        <div class="container">
-            <h1 class="animate-on-scroll">A Smoke-Free Future for Your School</h1>
-            <p class="animate-on-scroll">The Danish Cancer Society is proud to offer a comprehensive program to help schools educate their students about the dangers of smoking and the importance of a healthy lifestyle. Our program is fun, interactive, and easy to implement.</p>
+    <!-- School Dashboard -->
+    <section class="school-dashboard">
+        <div class="dashboard-header">
+            <h1>🏫 Copenhagen International School</h1>
+            <p style="color: #666;">5-Day Nicotine Hack Program Dashboard • Week 6 Progress</p>
+        </div>
 
-            <div class="benefits-grid">
-                <div class="benefit-card animate-on-scroll">
-                    <h3>Easy to Implement</h3>
-                    <p>Our program is designed to be easy to implement. We provide all the materials and support you need to get started.</p>
-                </div>
-                <div class="benefit-card animate-on-scroll">
-                    <h3>Fun and Interactive</h3>
-                    <p>Our program is designed to be fun and interactive. We use games, videos, and other interactive elements to keep students engaged.</p>
-                </div>
-                <div class="benefit-card animate-on-scroll">
-                    <h3>Comprehensive</h3>
-                    <p>Our program is comprehensive. We cover a wide range of topics, from the dangers of smoking to the importance of a healthy lifestyle.</p>
-                </div>
+        <!-- Stats Overview -->
+        <div class="stats-overview">
+            <div class="stat-box">
+                <div class="number">247</div>
+                <div class="label">Total Students Enrolled</div>
             </div>
+            <div class="stat-box">
+                <div class="number">189</div>
+                <div class="label">Completed Program</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">76%</div>
+                <div class="label">Completion Rate</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">4.8</div>
+                <div class="label">Avg. Rating ⭐</div>
+            </div>
+        </div>
 
-            <div class="signup-form animate-on-scroll">
-                <h2>Sign Up Your School Today</h2>
-                <form>
-                    <div class="input-group">
-                        <label>School Name</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Your Name</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Your Email</label>
-                        <input type="email" required>
-                    </div>
-                    <button type="submit" class="cta-button">Sign Up</button>
-                </form>
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>📊 Daily Participation</h3>
+                <canvas id="participation-chart"></canvas>
             </div>
+            <div class="chart-card">
+                <h3>📈 Completion by Grade</h3>
+                <canvas id="grade-chart"></canvas>
+            </div>
+        </div>
+
+        <!-- Student Progress Table -->
+        <div class="students-table">
+            <h3>📋 Recent Student Progress</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Grade</th>
+                        <th>Days Completed</th>
+                        <th>Progress</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Emma Nielsen</strong></td>
+                        <td>8th</td>
+                        <td>5 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lucas Andersen</strong></td>
+                        <td>7th</td>
+                        <td>5 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sofia Hansen</strong></td>
+                        <td>9th</td>
+                        <td>4 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 80%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oliver Larsen</strong></td>
+                        <td>8th</td>
+                        <td>5 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ida Petersen</strong></td>
+                        <td>7th</td>
+                        <td>3 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 60%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>William Jensen</strong></td>
+                        <td>9th</td>
+                        <td>5 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Freja Møller</strong></td>
+                        <td>8th</td>
+                        <td>2 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 40%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-progress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Noah Kristensen</strong></td>
+                        <td>7th</td>
+                        <td>0 / 5</td>
+                        <td>
+                            <div class="progress-bar-mini">
+                                <div class="progress-bar-mini-fill" style="width: 0%;"></div>
+                            </div>
+                        </td>
+                        <td><span class="status-badge status-pending">Not Started</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
-    <script src="new-script.js"></script>
+    <script>
+        // Daily Participation Chart
+        new Chart(document.getElementById('participation-chart'), {
+            type: 'line',
+            data: {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+                datasets: [{
+                    label: 'Students Present',
+                    data: [247, 241, 238, 235, 230],
+                    borderColor: '#FF6700',
+                    backgroundColor: 'rgba(255, 103, 0, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: false, min: 200 } }
+            }
+        });
+
+        // Grade Completion Chart
+        new Chart(document.getElementById('grade-chart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['7th Grade', '8th Grade', '9th Grade'],
+                datasets: [{
+                    data: [78, 82, 68],
+                    backgroundColor: ['#FF6700', '#FFA500', '#FFD700'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+
 </body>
+
 </html>
