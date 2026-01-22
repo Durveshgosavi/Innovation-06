@@ -365,4 +365,190 @@ footer {
     background: #1A202C;
     color: white;
     text-align: center;
+}/* --- Emergency Fixes for Landing Page Layout --- */
+
+/* Timeline Section (5-Day Hack Glimpse) */
+.training-plan-section {
+    padding: 5rem 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: left;
+}
+
+.day-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.day-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-color);
+}
+
+.day-card .date-badge {
+    flex-shrink: 0;
+    width: 80px;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: none;
+    /* Reset specific badge shadow */
+    margin-bottom: 0;
+    /* Reset badge margin */
+}
+
+.day-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.day-details p {
+    font-size: 0.95rem;
+    color: #718096;
+    margin-bottom: 0;
+}
+
+/* Lungs Section */
+.lungs-section {
+    padding: 5rem 10%;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.lungs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.lung-capacity-test {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.lung-capacity-test h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.lung-capacity-test ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.lung-capacity-test li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #4A5568;
+}
+
+.lung-capacity-test li::before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.lung-illustration {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Mini-Games Section */
+.games-section {
+    padding: 5rem 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.game-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #edf2f7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-color);
+}
+
+.game-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.game-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+
+    .lungs-grid,
+    .day-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline {
+        padding: 0 1rem;
+    }
+
+    .day-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .day-card .date-badge {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
