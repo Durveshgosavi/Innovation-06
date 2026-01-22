@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lung Capacity Challenge | Danish Cancer Society</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="new-styles.css">
     <style>
         .game-container {
@@ -15,6 +17,7 @@
             padding-top: 100px;
             text-align: center;
         }
+
         #timer {
             font-size: 3rem;
             font-weight: 700;
@@ -22,6 +25,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -33,10 +37,35 @@
     </header>
 
     <div class="game-container">
-        <h2>Lung Capacity Challenge</h2>
-        <p>Take a deep breath and hold it for as long as you can. Press the button to start and stop the timer.</p>
-        <div id="timer">0s</div>
-        <button id="timer-btn" class="cta-button">Start</button>
+        <h2 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 1rem;">Lung Capacity Challenge</h2>
+        <p style="max-width: 600px; margin-bottom: 2rem; color: #555;">Take a deep breath and hold it for as long as you
+            can. Press the button to start and stop the timer.</p>
+
+        <div id="timer" style="font-size: 5rem; color: var(--primary-color); text-shadow: 2px 2px 0px #eee;">0s</div>
+        <button id="timer-btn" class="cta-button" style="font-size: 1.5rem; padding: 1rem 4rem;">Start</button>
+
+        <!-- New Tips Section -->
+        <div class="tips-box"
+            style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 16px; border: 1px solid var(--primary-color); max-width: 600px; text-align: left;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">💡 Lung Health Tips</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                    <span style="font-size: 1.2rem; margin-right: 0.5rem;">🚭</span>
+                    <span><strong>Quit Early:</strong> Your lungs start repairing themselves just 20 minutes after your
+                        last cigarette.</span>
+                </li>
+                <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                    <span style="font-size: 1.2rem; margin-right: 0.5rem;">🏃</span>
+                    <span><strong>Get Moving:</strong> Cardio exercises like running and swimming naturally expand lung
+                        capacity.</span>
+                </li>
+                <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                    <span style="font-size: 1.2rem; margin-right: 0.5rem;">🧘</span>
+                    <span><strong>Deep Breathing:</strong> Practice diaphragmatic breathing daily to strengthen your
+                        diaphragm muscle.</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -63,4 +92,5 @@
     </script>
 
 </body>
+
 </html>

@@ -1,24 +1,28 @@
 :root {
-    --primary-color: #00A0E2;
-    --secondary-color: #F8B400;
-    --accent-color: #E5007D;
-    --bg-light: #F0F4F8;
-    --text-dark: #1A202C;
+    --primary-color: #FF6700;
+    /* Orange */
+    --secondary-color: #FFFFFF;
+    /* White */
+    --accent-color: #FFA500;
+    /* Lighter Orange */
+    --bg-light: #FFF8F0;
+    /* Very light orange/white tint */
+    --text-dark: #2D3748;
     --text-light: #FFFFFF;
     --font-main: 'Poppins', sans-serif;
     --transition-speed: 0.3s;
 
-    /* Day Themes */
-    --day1-color: #00E5FF;
-    /* Cyan/Blue */
-    --day2-color: #D500F9;
-    /* Purple/Pink */
-    --day3-color: #FF9E80;
-    /* Orange */
-    --day4-color: #00E676;
-    /* Green */
-    --day5-color: #FFD700;
+    /* Day Themes - Warm/Joyful Palette */
+    --day1-color: #FF8C00;
+    /* Dark Orange */
+    --day2-color: #FFD700;
     /* Gold */
+    --day3-color: #FF6347;
+    /* Tomato */
+    --day4-color: #FF4500;
+    /* Orange Red */
+    --day5-color: #FFA07A;
+    /* Light Salmon */
 }
 
 * {
@@ -365,7 +369,9 @@ footer {
     background: #1A202C;
     color: white;
     text-align: center;
-}/* --- Emergency Fixes for Landing Page Layout --- */
+}
+
+/* --- Emergency Fixes for Landing Page Layout --- */
 
 /* Timeline Section (5-Day Hack Glimpse) */
 .training-plan-section {

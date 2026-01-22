@@ -16,8 +16,8 @@
     <header>
         <div class="logo">Danish Cancer Society</div>
         <nav>
-            <a href="#lungs">Our Lungs</a>
-            <a href="#games">Mini-Games</a>
+            <a href="#breathing">Our Lungs</a>
+            <a href="5-day-plan.html">The Plan</a>
             <a href="student-dashboard.html">Student Dashboard</a>
             <a href="parent-dashboard.html">Parent Dashboard</a>
             <a href="for-schools.html" class="nav-cta">For Schools</a>
@@ -26,70 +26,64 @@
 
     <!-- Hero Section -->
     <section class="hero"
-        style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url('https://image.pollinations.ai/prompt/A%20diverse%20group%20of%20happy%20kids%20playing%20in%20a%20sunny%20field,%20with%20a%20focus%20on%20health%20and%20vitality.%20The%20style%20should%20be%20a%20bright%20and%20colorful%20illustration.') no-repeat center center; background-size: cover;">
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://image.pollinations.ai/prompt/Happy%20diverse%20teenagers%20jumping%20in%20a%20sunflower%20field,%20bright%20orange%20sunlight,%20joyful,%20energetic,%20healthy%20lifestyle,%20cinematic%20lighting?width=1200&height=800&nologo=true') no-repeat center center; background-size: cover;">
         <div class="hero-content animate-on-scroll">
-            <h1>Experience the Difference: A 5-Day Nicotine Awareness Week</h1>
-            <p>Forget lectures. We offer a 5-day interactive learning program that temporarily replaces the regular
-                school curriculum for one week. Students get moving, thinking, and experiencing to understand the real
-                impact of nicotine.</p>
+            <h1>"Smoking? That's so yesterday."</h1>
+            <p class="hero-quote" style="font-size: 1.5rem; font-style: italic; margin-bottom: 2rem;">"Your lungs are
+                your lifelines. Don't burn them for a fleeting buzz."</p>
+            <p>Join the movement. 5 Days to reclaim your breath, your brain, and your freedom.</p>
             <div class="hero-buttons">
-                <a href="5-day-plan.html" class="cta-button">Explore the 5-Day Plan</a>
-                <a href="#games" class="cta-button secondary">Play the Mini-Games</a>
+                <a href="5-day-plan.html" class="cta-button">Start the 5-Day Hack</a>
+                <a href="#breathing" class="cta-button secondary">Try Breathing Exercise</a>
             </div>
         </div>
     </section>
 
-    <!-- Lungs Section -->
-    <section id="lungs" class="lungs-section">
-        <h2 class="animate-on-scroll">The Power of Your Lungs</h2>
-        <p class="animate-on-scroll">Physical activity is a core part of our program. We help students engage actively
-            and understand nicotine’s impact on body and mind.</p>
+    <!-- Danish Smoking Statistics Section -->
+    <section class="stats-section" style="padding: 5rem 10%; background: #fff; text-align: center;">
+        <h2 class="animate-on-scroll" style="color: var(--primary-color);">Real Talk: The Numbers</h2>
+        <p class="animate-on-scroll">Why we are fighting for a #SmokeFreeFuture in Denmark.</p>
+        <div class="stats-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+            <div class="stat-card animate-on-scroll"
+                style="padding: 2rem; border-radius: 16px; background: var(--bg-light); border: 2px solid var(--primary-color);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">1 in 5</div>
+                <p>Young Danes aged 16-24 smoke daily or occasionally.</p>
+            </div>
+            <div class="stat-card animate-on-scroll"
+                style="padding: 2rem; border-radius: 16px; background: var(--bg-light); border: 2px solid var(--primary-color);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">13,600</div>
+                <p>Danes die every year from smoking-related illnesses.</p>
+            </div>
+            <div class="stat-card animate-on-scroll"
+                style="padding: 2rem; border-radius: 16px; background: var(--bg-light); border: 2px solid var(--primary-color);">
+                <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">40+</div>
+                <p>Carcinogenic substances found in every single cigarette.</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">Data based on general Danish health estimates
+            (Cancer.dk & SST).</p>
+    </section>
+
+    <!-- Lungs & Breathing Section -->
+    <section id="breathing" class="lungs-section">
+        <h2 class="animate-on-scroll">Master Your Breath</h2>
+        <p class="animate-on-scroll">Strengthen your lungs and calm your mind. A smoke-free life starts with a deep
+            breath.</p>
         <div class="lungs-grid">
             <div class="lung-capacity-test animate-on-scroll">
-                <h3>Test Your Lung Capacity</h3>
-                <p>Take a deep breath and hold it for as long as you can. Time yourself and see how you improve over
-                    time! This is a simple way to measure your lung capacity and see the benefits of a healthy
-                    lifestyle.</p>
-                <ul>
-                    <li>10 seconds: Good</li>
-                    <li>20 seconds: Great</li>
-                    <li>30 seconds: Excellent</li>
-                </ul>
-                <h3 style="margin-top: 2rem;">Breathing Exercises</h3>
-                <p>Try these simple breathing exercises to improve your lung capacity and reduce stress:</p>
-                <ul>
-                    <li><strong>Diaphragmatic Breathing:</strong> Lie on your back and place one hand on your chest and
-                        the other on your stomach. Breathe in slowly through your nose, feeling your stomach rise.
-                        Breathe out slowly through your mouth, feeling your stomach fall.</li>
-                    <li><strong>Pursed-Lip Breathing:</strong> Breathe in slowly through your nose for two seconds.
-                        Pucker your lips as if you are about to whistle and breathe out slowly for four seconds.</li>
-                </ul>
+                <h3>Lung Capacity Challenge</h3>
+                <p>Test yourself daily. How long can you hold it?</p>
+                <div style="margin: 2rem 0;">
+                    <a href="lung-capacity-game.html" class="cta-button">Play Challenge</a>
+                </div>
+                <h3 style="margin-top: 2rem;">Why it matters?</h3>
+                <p>Smoking reduces lung capacity, making sports and even walking harder. Reclaiming your breath means
+                    reclaiming your energy.</p>
             </div>
             <div class="animate-on-scroll">
-                <img src="https://image.pollinations.ai/prompt/A%20colorful%20and%20friendly%20illustration%20of%20healthy%20human%20lungs,%20with%20flowers%20and%20butterflies%20around%20them."
-                    alt="Illustration of Lungs" class="lung-illustration">
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini-Games Section -->
-    <section id="games" class="games-section">
-        <h2 class="animate-on-scroll">Fun Mini-Games</h2>
-        <p class="animate-on-scroll">Experiential learning keeps students involved and makes the lessons memorable. Our
-            mini-games provide opportunities for adaptation and creativity.</p>
-        <div class="games-grid">
-            <div class="game-card animate-on-scroll">
-                <div class="icon">🎮</div>
-                <h3>Nicotine Snake</h3>
-                <p>A classic snake game with a twist. The snake is the "Nicotine" and the food is "Brain Cells".</p>
-                <a href="snake-game.html" class="cta-button">Play Now</a>
-            </div>
-            <div class="game-card animate-on-scroll">
-                <div class="icon">🕹️</div>
-                <h3>Lung Capacity Challenge</h3>
-                <p>A game that challenges you to hold your breath for as long as you can. The longer you hold your
-                    breath, the more points you get.</p>
-                <a href="lung-capacity-game.html" class="cta-button">Play Now</a>
+                <img src="https://image.pollinations.ai/prompt/A%20calm%20illustration%20of%20a%20person%20meditating%20with%20glowing%20healthy%20lungs,%20orange%20and%20white%20vector%20art,%20peaceful?width=600&height=600&nologo=true"
+                    alt="Healthy Lungs Illustration" class="lung-illustration">
             </div>
         </div>
     </section>
