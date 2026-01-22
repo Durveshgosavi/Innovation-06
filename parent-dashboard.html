@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parent Dashboard | Danish Cancer Society</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="parent-dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -22,8 +23,8 @@
 
     <div class="app-container">
 
-        <!-- Auth Screen -->
-        <div id="auth-screen" class="auth-box">
+        <!-- Auth Screen (HIDDEN FOR DEMO) -->
+        <div id="auth-screen" class="auth-box" style="display: none;">
             <h2>Parent Login</h2>
             <p>Enter your credentials to access your dashboard.</p>
             <form id="login-form">
@@ -40,18 +41,79 @@
             </form>
         </div>
 
-        <!-- Dashboard Screen -->
-        <div id="dashboard-screen" class="dashboard" style="display: none;">
+        <!-- Dashboard Screen (VISIBLE FOR DEMO) -->
+        <div id="dashboard-screen" class="dashboard" style="display: block;">
             <div class="welcome-header">
                 <h1>Hello, <span id="user-display">Parent</span>! 👋</h1>
-                <p>Track your child's progress through Week 6.</p>
+                <p>Track your child's progress through the 5-Day Nicotine Hack.</p>
             </div>
 
             <div class="dashboard-grid">
                 <!-- Progress Card -->
                 <div class="dash-card stats">
-                    <h3>Week 6 Progress</h3>
+                    <h3>5-Day Challenge Progress</h3>
                     <canvas id="progress-chart"></canvas>
+                </div>
+
+                <!-- Child Info Card -->
+                <div class="dash-card" style="background: white; padding: 2rem; border-radius: 16px;">
+                    <h3 style="margin-bottom: 1rem; color: #FF6700;">Your Child's Status</h3>
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div
+                            style="width: 60px; height: 60px; background: linear-gradient(135deg, #FF6700, #FFA500); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; margin-right: 1rem;">
+                            🎓</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 1.2rem;">Emma Nielsen</div>
+                            <div style="color: #888;">Grade 8 • Copenhagen International School</div>
+                        </div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Days Completed</span>
+                            <span style="font-weight: 700; color: #FF6700;">5 / 5</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Activities Logged</span>
+                            <span style="font-weight: 700; color: #FF6700;">12</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Status</span>
+                            <span style="font-weight: 700; color: #28a745;">✓ Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Breakdown -->
+                <div class="dash-card"
+                    style="background: white; padding: 2rem; border-radius: 16px; grid-column: 1 / -1;">
+                    <h3 style="margin-bottom: 1.5rem; color: #FF6700;">Daily Breakdown</h3>
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;">
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e9; border-radius: 12px;">
+                            <div style="font-weight: 700; color: #28a745;">Day 1</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Body Hack</div>
+                            <div style="margin-top: 0.5rem;">✅</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e9; border-radius: 12px;">
+                            <div style="font-weight: 700; color: #28a745;">Day 2</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Brain Hack</div>
+                            <div style="margin-top: 0.5rem;">✅</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e9; border-radius: 12px;">
+                            <div style="font-weight: 700; color: #28a745;">Day 3</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Social Hack</div>
+                            <div style="margin-top: 0.5rem;">✅</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e9; border-radius: 12px;">
+                            <div style="font-weight: 700; color: #28a745;">Day 4</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Health Hack</div>
+                            <div style="margin-top: 0.5rem;">✅</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #e8f5e9; border-radius: 12px;">
+                            <div style="font-weight: 700; color: #28a745;">Day 5</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Community Hack</div>
+                            <div style="margin-top: 0.5rem;">✅</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
