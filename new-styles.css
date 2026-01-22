@@ -1,0 +1,360 @@
+:root {
+    --primary-color: #00A0E2;
+    --secondary-color: #F8B400;
+    --accent-color: #E5007D;
+    --bg-light: #F0F4F8;
+    --text-dark: #1A202C;
+    --text-light: #FFFFFF;
+    --font-main: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+
+    /* Day Themes */
+    --day1-color: #00E5FF;
+    /* Cyan/Blue */
+    --day2-color: #D500F9;
+    /* Purple/Pink */
+    --day3-color: #FF9E80;
+    /* Orange */
+    --day4-color: #00E676;
+    /* Green */
+    --day5-color: #FFD700;
+    /* Gold */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.125rem;
+    color: #4A5568;
+    margin-bottom: 1.5rem;
+}
+
+/* Header & Nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.nav-cta {
+    background: var(--primary-color);
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    color: var(--text-light) !important;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 160, 226, 0.3);
+    transition: all var(--transition-speed);
+}
+
+.nav-cta:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(229, 0, 125, 0.4);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* Deep dark blue gradient */
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/hero-pattern.png') repeat;
+    /* Optional subtle pattern */
+    opacity: 0.1;
+}
+
+.hero-content {
+    max-width: 700px;
+    z-index: 1;
+    animation: fadeUp 1s ease-out;
+}
+
+.hero h1 {
+    color: var(--text-light);
+    font-size: 4.5rem;
+    background: -webkit-linear-gradient(right, #fff, #b2ebf2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #E2E8F0;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--accent-color), #ff4081);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    transition: all var(--transition-speed);
+    box-shadow: 0 10px 25px rgba(229, 0, 125, 0.4);
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(229, 0, 125, 0.6);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+    margin-left: 1rem;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+
+/* 5-Day Plan Page Specifics */
+.plan-header {
+    background: linear-gradient(120deg, var(--primary-color), #6dd5fa, #ffffff);
+    padding: 8rem 10% 4rem;
+    text-align: center;
+}
+
+.plan-header h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.day-container {
+    padding: 4rem 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.day-container:nth-child(even) {
+    background: #f8fbff;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.day-content h2 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(45deg, var(--text-dark), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.day-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: white;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.session-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    transition: transform var(--transition-speed);
+}
+
+.session-card:hover {
+    transform: translateY(-5px);
+}
+
+.session-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.session-card .label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.activity-box {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.day-visual {
+    position: relative;
+}
+
+.day-visual img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.day-visual:hover img {
+    transform: scale(1.02);
+}
+
+/* Specific Day Colors */
+.day-1 .day-badge {
+    background: var(--day1-color);
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.4);
+}
+
+.day-2 .day-badge {
+    background: var(--day2-color);
+    box-shadow: 0 5px 15px rgba(213, 0, 249, 0.4);
+}
+
+.day-3 .day-badge {
+    background: var(--day3-color);
+    box-shadow: 0 5px 15px rgba(255, 158, 128, 0.4);
+}
+
+.day-4 .day-badge {
+    background: var(--day4-color);
+    box-shadow: 0 5px 15px rgba(0, 230, 118, 0.4);
+}
+
+.day-5 .day-badge {
+    background: var(--day5-color);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer (optional if needed later) */
+footer {
+    padding: 3rem 10%;
+    background: #1A202C;
+    color: white;
+    text-align: center;
+}

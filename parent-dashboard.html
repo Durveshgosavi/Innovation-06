@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard | Danish Cancer Society</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="parent-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Danish Cancer Society</div>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <div class="app-container">
+
+        <!-- Auth Screen -->
+        <div id="auth-screen" class="auth-box">
+            <h2>Parent Login</h2>
+            <p>Enter your credentials to access your dashboard.</p>
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="e.g. parent" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="e.g. password" required>
+                </div>
+                <button type="submit" class="cta-button"
+                    style="width: 100%; border: none; cursor: pointer;">Login</button>
+            </form>
+        </div>
+
+        <!-- Dashboard Screen -->
+        <div id="dashboard-screen" class="dashboard" style="display: none;">
+            <div class="welcome-header">
+                <h1>Hello, <span id="user-display">Parent</span>! 👋</h1>
+                <p>Track your child's progress through Week 6.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Progress Card -->
+                <div class="dash-card stats">
+                    <h3>Week 6 Progress</h3>
+                    <canvas id="progress-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="parent-dashboard.js"></script>
+</body>
+
+</html>

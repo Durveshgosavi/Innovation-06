@@ -4,90 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movement for Life | Help Centre</title>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Ionicons for Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Smoke-Free Future | Danish Cancer Society</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="new-styles.css">
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-        <div class="logo">CAMPUS ACTIVE</div>
+        <div class="logo">Danish Cancer Society</div>
         <nav>
-            <a href="#schedule">Weekly Schedule</a>
-            <a href="#about">Why Join?</a>
-            <a href="#contact">Contact</a>
-            <a href="dashboard.html" class="nav-login-btn">Student Login</a>
+            <a href="#lungs">Our Lungs</a>
+            <a href="#games">Mini-Games</a>
+            <a href="student-dashboard.html">Student Dashboard</a>
+            <a href="parent-dashboard.html">Parent Dashboard</a>
+            <a href="for-schools.html" class="nav-cta">For Schools</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Empower Your Campus Life</h1>
-            <p>Balance your studies with movement. Join the student community for sports, yoga, and outdoor adventures.
-            </p>
+    <section class="hero"
+        style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url('https://image.pollinations.ai/prompt/A%20diverse%20group%20of%20happy%20kids%20playing%20in%20a%20sunny%20field,%20with%20a%20focus%20on%20health%20and%20vitality.%20The%20style%20should%20be%20a%20bright%20and%20colorful%20illustration.') no-repeat center center; background-size: cover;">
+        <div class="hero-content animate-on-scroll">
+            <h1>Experience the Difference: A 5-Day Nicotine Awareness Week</h1>
+            <p>Forget lectures. We offer a 5-day interactive learning program that temporarily replaces the regular
+                school curriculum for one week. Students get moving, thinking, and experiencing to understand the real
+                impact of nicotine.</p>
             <div class="hero-buttons">
-                <a href="#schedule" class="cta-button">See Schedule</a>
-                <a href="dashboard.html" class="cta-button secondary">Track Progress</a>
+                <a href="5-day-plan.html" class="cta-button">Explore the 5-Day Plan</a>
+                <a href="#games" class="cta-button secondary">Play the Mini-Games</a>
             </div>
         </div>
     </section>
 
-    <!-- Intro / Features Section -->
-    <section id="about" class="intro">
-        <h2>Boost Your Focus & Energy</h2>
-        <p>A healthy body fuels a sharp mind. Take a break from the library and move with us.</p>
-
-        <div class="intro-grid">
-            <div class="feature-card">
-                <div class="icon"><ion-icon name="fitness-outline"></ion-icon></div>
-                <h3>Exam Stress Relief</h3>
-                <p>High-cortisol levels block learning. Lower stress with our guided meditaion and yoga sessions.</p>
+    <!-- Lungs Section -->
+    <section id="lungs" class="lungs-section">
+        <h2 class="animate-on-scroll">The Power of Your Lungs</h2>
+        <p class="animate-on-scroll">Physical activity is a core part of our program. We help students engage actively
+            and understand nicotine’s impact on body and mind.</p>
+        <div class="lungs-grid">
+            <div class="lung-capacity-test animate-on-scroll">
+                <h3>Test Your Lung Capacity</h3>
+                <p>Take a deep breath and hold it for as long as you can. Time yourself and see how you improve over
+                    time! This is a simple way to measure your lung capacity and see the benefits of a healthy
+                    lifestyle.</p>
+                <ul>
+                    <li>10 seconds: Good</li>
+                    <li>20 seconds: Great</li>
+                    <li>30 seconds: Excellent</li>
+                </ul>
+                <h3 style="margin-top: 2rem;">Breathing Exercises</h3>
+                <p>Try these simple breathing exercises to improve your lung capacity and reduce stress:</p>
+                <ul>
+                    <li><strong>Diaphragmatic Breathing:</strong> Lie on your back and place one hand on your chest and
+                        the other on your stomach. Breathe in slowly through your nose, feeling your stomach rise.
+                        Breathe out slowly through your mouth, feeling your stomach fall.</li>
+                    <li><strong>Pursed-Lip Breathing:</strong> Breathe in slowly through your nose for two seconds.
+                        Pucker your lips as if you are about to whistle and breathe out slowly for four seconds.</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <div class="icon"><ion-icon name="people-outline"></ion-icon></div>
-                <h3>Social Connections</h3>
-                <p>Meet students from other faculties. Our team games are designed to build friendships, not just
-                    muscle.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon"><ion-icon name="trending-up-outline"></ion-icon></div>
-                <h3>Track Your Gains</h3>
-                <p>Log your activities and watch your progress. Compete with yourself and stay motivated all semester.
-                </p>
+            <div class="animate-on-scroll">
+                <img src="https://image.pollinations.ai/prompt/A%20colorful%20and%20friendly%20illustration%20of%20healthy%20human%20lungs,%20with%20flowers%20and%20butterflies%20around%20them."
+                    alt="Illustration of Lungs" class="lung-illustration">
             </div>
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="schedule">
-        <h2>This Week's Schedule</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
-            We have planned a diverse week of activities. All sessions are beginner-friendly and guided by our expert
-            team.
-        </p>
-
-        <div id="schedule-container" class="timeline">
-            <!-- Dynamic Content Loaded via JS -->
+    <!-- Mini-Games Section -->
+    <section id="games" class="games-section">
+        <h2 class="animate-on-scroll">Fun Mini-Games</h2>
+        <p class="animate-on-scroll">Experiential learning keeps students involved and makes the lessons memorable. Our
+            mini-games provide opportunities for adaptation and creativity.</p>
+        <div class="games-grid">
+            <div class="game-card animate-on-scroll">
+                <div class="icon">🎮</div>
+                <h3>Nicotine Snake</h3>
+                <p>A classic snake game with a twist. The snake is the "Nicotine" and the food is "Brain Cells".</p>
+                <a href="snake-game.html" class="cta-button">Play Now</a>
+            </div>
+            <div class="game-card animate-on-scroll">
+                <div class="icon">🕹️</div>
+                <h3>Lung Capacity Challenge</h3>
+                <p>A game that challenges you to hold your breath for as long as you can. The longer you hold your
+                    breath, the more points you get.</p>
+                <a href="lung-capacity-game.html" class="cta-button">Play Now</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="logo" style="margin-bottom: 1rem;">Help Centre</div>
-        <p>Denmark • +45 12 34 56 78 • info@helpcentre.dk</p>
-        <p style="margin-top: 2rem;">&copy; 2026 Help Centre. All rights reserved.</p>
-    </footer>
+    <!-- Week 6 Training Plan Section -->
+    <section id="training-plan" class="training-plan-section">
+        <h2 class="animate-on-scroll">A Glimpse into the 5-Day Hack</h2>
+        <p class="animate-on-scroll">A completely immersive week-long challenge to "hack" the nicotine habit.</p>
+        <div class="timeline">
+            <div class="day-card animate-on-scroll">
+                <div class="date-badge" style="background: var(--day1-color);">Day 1</div>
+                <div class="day-details">
+                    <h3>The Body Hack</h3>
+                    <p>Understanding the physiological takeover: Nicotine's journey from lungs to blood. Heart rate
+                        bio-feedback challenges.</p>
+                </div>
+            </div>
+            <div class="day-card animate-on-scroll">
+                <div class="date-badge" style="background: var(--day2-color);">Day 2</div>
+                <div class="day-details">
+                    <h3>The Brain Hack</h3>
+                    <p>Dopamine hijacking and the science of addiction. Gamified simulations of how the brain gets
+                        "hacked".</p>
+                </div>
+            </div>
+            <div class="day-card animate-on-scroll">
+                <div class="date-badge" style="background: var(--day3-color);">Day 3</div>
+                <div class="day-details">
+                    <h3>The Social Hack</h3>
+                    <p>Decoding the matrix: Analyzing media manipulation, peer pressure, and mastering the art of saying
+                        "No".</p>
+                </div>
+            </div>
+            <div class="day-card animate-on-scroll">
+                <div class="date-badge" style="background: var(--day4-color);">Day 4</div>
+                <div class="day-details">
+                    <h3>The Health Hack</h3>
+                    <p>Reclaiming vitality: Visualizing recovery timelines and exploring high-energy healthy
+                        alternatives.</p>
+                </div>
+            </div>
+            <div class="day-card animate-on-scroll">
+                <div class="date-badge" style="background: var(--day5-color);">Day 5</div>
+                <div class="day-details">
+                    <h3>The Community Hack</h3>
+                    <p>Solidifying the firewall: Family dialogues and a school-wide pledge to stay hack-proof and
+                        smoke-free.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="5-day-plan.html" class="cta-button">See the Full 5-Day Plan</a>
+        </div>
+    </section>
 
-    <script type="module" src="script.js"></script>
+    <script src="new-script.js"></script>
 </body>
 
 </html>
