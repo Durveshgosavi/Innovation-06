@@ -373,16 +373,19 @@ footer {
 
 /* --- Emergency Fixes for Landing Page Layout --- */
 
-/* Timeline Section (5-Day Hack Glimpse) */
+/* --- Cleaner UI Updates --- */
+
+/* Timeline Section */
 .training-plan-section {
-    padding: 5rem 10%;
+    padding: 6rem 10%;
+    /* More whitespace */
     background: #fff;
     text-align: center;
 }
 
 .timeline {
     max-width: 800px;
-    margin: 3rem auto 0;
+    margin: 4rem auto 0;
     text-align: left;
 }
 
@@ -390,47 +393,51 @@ footer {
     display: flex;
     align-items: center;
     background: #fff;
-    border: 1px solid #edf2f7;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+    /* Subtler border */
+    border-radius: 16px;
+    /* Softer radius */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    /* Very soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .day-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     border-color: var(--primary-color);
 }
 
-.day-card .date-badge {
-    flex-shrink: 0;
-    width: 80px;
-    padding: 0.5rem;
-    text-align: center;
-    color: white;
-    font-weight: 700;
-    border-radius: 8px;
-    margin-right: 1.5rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    box-shadow: none;
-    /* Reset specific badge shadow */
-    margin-bottom: 0;
-    /* Reset badge margin */
+/* ... (rest of badge styles) ... */
+
+/* Stats Grid Cleanup */
+.stats-section {
+    padding: 6rem 10% !important;
 }
 
-.day-details h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-    color: var(--text-dark);
+.stat-card {
+    padding: 2.5rem !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    /* Clean white background */
+    border: 1px solid #f0f0f0 !important;
+    /* Remove thick colored border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Float effect */
+    transition: transform 0.3s ease;
 }
 
-.day-details p {
-    font-size: 0.95rem;
-    color: #718096;
-    margin-bottom: 0;
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 103, 0, 0.15);
+    /* Orange glow on hover */
+}
+
+.stat-card div {
+    /* The big number */
+    margin-bottom: 0.5rem;
 }
 
 /* Lungs Section */
