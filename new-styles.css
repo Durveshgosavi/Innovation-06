@@ -329,9 +329,17 @@ nav a:hover {
 
 /* Animations */
 .animate-on-scroll {
+    opacity: 1;
+    /* Fallback: Visible by default to prevent blank screen */
+    transform: translateY(0);
+    /* Reset transform */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Optional: Only hide if we add a js-enabled class, but for now let's just keep it visible */
+.animate-on-scroll.hidden-initial {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(20px);
 }
 
 .animate-on-scroll.is-visible {
